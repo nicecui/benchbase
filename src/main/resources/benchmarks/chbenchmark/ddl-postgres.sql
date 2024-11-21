@@ -14,8 +14,8 @@ CREATE TABLE nation (
     n_name      char(25)  NOT NULL,
     n_regionkey int       NOT NULL,
     n_comment   char(152) NOT NULL,
-    FOREIGN KEY (n_regionkey) REFERENCES region (r_regionkey) ON DELETE CASCADE,
-    PRIMARY KEY (n_nationkey)
+    FOREIGN KEY (n_regionkey) REFERENCES region (r_regionkey) ON DELETE CASCADE
+    -- PRIMARY KEY (n_nationkey)
 );
 
 CREATE TABLE supplier (
@@ -26,6 +26,6 @@ CREATE TABLE supplier (
     su_phone     char(15)       NOT NULL,
     su_acctbal   numeric(12, 2) NOT NULL,
     su_comment   char(101)      NOT NULL,
-    FOREIGN KEY (su_nationkey) REFERENCES nation (n_nationkey) ON DELETE CASCADE,
+    -- FOREIGN KEY (su_nationkey) REFERENCES nation (n_nationkey) ON DELETE CASCADE,
     PRIMARY KEY (su_suppkey)
 );
